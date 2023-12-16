@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Kunal_TE_Project_16ModelStoreContainer" CdmEntityContainer="Kunal_TE_Project_16Entities">
+    <EntitySetMapping Name="tbl_farmer">
+      <EntityTypeMapping TypeName="Kunal_TE_Project_16Model.tbl_farmer">
+        <MappingFragment StoreEntitySet="tbl_farmer">
+          <ScalarProperty Name="far_id" ColumnName="far_id" />
+          <ScalarProperty Name="far_name" ColumnName="far_name" />
+          <ScalarProperty Name="far_email" ColumnName="far_email" />
+          <ScalarProperty Name="far_password" ColumnName="far_password" />
+          <ScalarProperty Name="far_contact" ColumnName="far_contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_product">
+      <EntityTypeMapping TypeName="Kunal_TE_Project_16Model.tbl_product">
+        <MappingFragment StoreEntitySet="tbl_product">
+          <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+          <ScalarProperty Name="pro_name" ColumnName="pro_name" />
+          <ScalarProperty Name="pro_image" ColumnName="pro_image" />
+          <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+          <ScalarProperty Name="pro_farmer_adderess" ColumnName="pro_farmer_adderess" />
+          <ScalarProperty Name="pro_farmer_contact" ColumnName="pro_farmer_contact" />
+          <ScalarProperty Name="pro_des" ColumnName="pro_des" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_user">
+      <EntityTypeMapping TypeName="Kunal_TE_Project_16Model.tbl_user">
+        <MappingFragment StoreEntitySet="tbl_user">
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="u_name" ColumnName="u_name" />
+          <ScalarProperty Name="u_email" ColumnName="u_email" />
+          <ScalarProperty Name="u_password" ColumnName="u_password" />
+          <ScalarProperty Name="u_contact" ColumnName="u_contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

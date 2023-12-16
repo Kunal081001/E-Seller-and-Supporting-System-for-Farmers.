@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ESeller_System.Models.tbl_product>
+
+@{
+    ViewBag.Title = "Product";
+}
+
+<h2 style="text-align:center"><b>Product</b></h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.pro_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pro_image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pro_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pro_farmer_adderess)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pro_farmer_contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pro_des)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_name)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.pro_image)*@
+                <img src="@Url.Content(item.pro_image)" alt="Alternate Text" width="100" height="100" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_farmer_adderess)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_farmer_contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_des)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
+

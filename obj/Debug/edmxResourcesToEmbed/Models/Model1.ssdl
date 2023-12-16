@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Kunal_TE_Project_16Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_farmer">
+    <Key>
+      <PropertyRef Name="far_id" />
+    </Key>
+    <Property Name="far_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="far_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="far_email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="far_password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="far_contact" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_product">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pro_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="pro_image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pro_price" Type="varchar" MaxLength="90" />
+    <Property Name="pro_farmer_adderess" Type="nvarchar(max)" />
+    <Property Name="pro_farmer_contact" Type="nvarchar(max)" />
+    <Property Name="pro_des" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_user">
+    <Key>
+      <PropertyRef Name="u_id" />
+    </Key>
+    <Property Name="u_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="u_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="u_email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="u_password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="u_contact" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Kunal_TE_Project_16ModelStoreContainer">
+    <EntitySet Name="tbl_farmer" EntityType="Self.tbl_farmer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_product" EntityType="Self.tbl_product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_user" EntityType="Self.tbl_user" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
